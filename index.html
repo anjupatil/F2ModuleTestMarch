@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Student Management CRUD</h1>
+	<table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit(event)">
+                    <div>
+                        <input type="text" placeholder="Name" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" name="email" id="email">
+                    </div>
+                    <div>
+                        <input type="number" placeholder="GPA" id="gpa" name="gpa" step="0.1" min="0" max="10" required>
+                    </div>
+                    <div>
+                        <input type="number" placeholder="Age" id="age" name="age" min="0" max="150" required>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Degree" id="degree" name="degree" required>
+                    </div>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset" onclick="resetForm()">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentList">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>GPA</th>
+                            <th>Degree</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div>
+
+        <input type="text" id="searchInput" placeholder="Search by email,name or degree">
+        <button title="Clear search field and press search button to restore data" onclick="searchTable()">Search</button>
+        <p>Clear search field and press search button to restore data</p>
+    </div>
+
+   
+	
+
+	<script src="studentManagement.js"></script>
+</body>
+</html>
